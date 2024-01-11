@@ -142,7 +142,7 @@ class DetailsPage extends StatelessWidget {
                                     color: Colors.white,
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.grey[200],
+                                        color: Colors.grey.shade200,
                                         blurRadius: 9.0,
                                         offset: Offset(0, 3),
                                       ),

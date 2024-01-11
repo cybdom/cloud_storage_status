@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class MyProgressBar extends StatelessWidget {
   final bool isActive;
 
-  const MyProgressBar({Key key, this.isActive}) : super(key: key);
+  const MyProgressBar({super.key, required this.isActive});
+
   @override
   Widget build(BuildContext context) {
     return Container(

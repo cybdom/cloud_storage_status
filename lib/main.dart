@@ -1,8 +1,6 @@
 import 'package:cloud_storage_status/details.dart';
 import 'package:cloud_storage_status/progressBar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'dart:math';
 
 void main() => runApp(MyApp());
 
@@ -53,7 +51,7 @@ class Home extends StatelessWidget {
         body: Container(
           padding: EdgeInsets.all(15.0),
           child: SingleChildScrollView(
-                      child: Column(
+            child: Column(
               children: <Widget>[
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +86,7 @@ class Home extends StatelessWidget {
                     ),
                     SizedBox(height: 15.0),
                     Container(
-                      height: 250,
+                      height: MediaQuery.of(context).size.height * .5,
                       child: PageView.builder(
                         itemCount: 2,
                         itemBuilder: (context, id) {
@@ -239,10 +237,8 @@ class Home extends StatelessWidget {
 
 class MyContainer extends StatelessWidget {
   final bool isActive;
-  const MyContainer({
-    Key key,
-    this.isActive,
-  }) : super(key: key);
+
+  const MyContainer({super.key, required this.isActive});
 
   @override
   Widget build(BuildContext context) {
